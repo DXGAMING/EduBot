@@ -7,13 +7,6 @@ import org.hibernate.Transaction;
 public class UserDAO implements DBApi<JediBotUser,Long> {
 
     @Override
-    public JediBotUser findById(long id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(JediBotUser.class, id);
-
-    }
-    
-
-    @Override
     public JediBotUser findById(Long id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(JediBotUser.class, id);
     }
